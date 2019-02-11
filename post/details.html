@@ -1,0 +1,42 @@
+<div ng-include="'layaut/nav.html'"></div>
+
+  <div class="container">
+     <div class="loader"></div> 
+     <div class="row detail-news">
+      <div class="col-md-12" style="background-color:{{details.primary_color}}; height: 60px">
+
+          <img src="{{details.community_icon}}"  class="img-circle img-detail" ng-show="details.community_icon">
+
+          <img src="https://b.thumbs.redditmedia.com/65GJujMgAXbydbxxFPYm6eck1YffqR-anhX4-hxnVhQ.png"  class="img-circle img-detail" ng-show="!details.community_icon">
+          <span class="name-detail">{{details.display_name_prefixed}}</span>
+      </div>
+
+      <div class="col-md-8 details-info">
+        <h2>{{details.title}}</h2>
+        <h4>{{details.public_description}}</h4>
+      </div>
+
+      <div class="col-md-4 details-info">
+        <h5><strong>categorty:</strong> {{details.advertiser_category}} 
+          <span ng-show="!details.advertiser_category">none</span><br>
+        <strong>subscribers:</strong> {{details.subscribers}}</h5>
+      </div>
+
+      <div class="col-md-12">
+        <img src="{{details.banner_img}}" style="width: 95%;height: 60%;" ng-show="details.banner_img">
+        <div>
+          <br><a href="#!/" class="btn btn-primary">Volver</a>
+        </div>
+      </div>
+      
+   </div>
+
+    <div class="row alert-detail">
+        <div class="col-md-12">
+           <div class="alert">
+               <i class="fas fa-exclamation-circle"></i> tema no encontrado..
+           </div>
+       </div>
+     </div>
+
+  </div>

@@ -1,0 +1,35 @@
+<div ng-include="'layaut/nav.html'"></div>
+
+<div class="container">
+  <div class="loader home-loader"></div> 
+
+  <div class="row alert-home">
+    <div class="col-md-12">
+      <div class="alert">
+        <i class="fas fa-exclamation-circle"></i> Aún no hay temas..
+      </div>
+    </div>
+   </div>
+
+  <div class="row">
+    <div class="col-md-4" ng-repeat="post in posts">
+      <div class="card" style="width: 18rem;">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Flag_of_None.svg/1280px-Flag_of_None.svg.png" class="card-img-top" alt="..." ng-show="!post.community_icon">
+
+         <img src="{{post.community_icon}}" class="card-img-top" alt="..." ng-show="post.community_icon">
+
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{post.title}}</strong></h5>
+          <p class="card-text">{{post.public_description }}</p>
+
+        </div>
+ 
+        <div class="card-body">
+           <a href="#!/post/{{post.id}}" class="btn btn-primary">Detalle</a>
+         </div>
+      </div>
+     
+     </div> 
+   </div>
+</div>
