@@ -1,4 +1,4 @@
-# Api rest consume reddit posts
+# Reddit-posts
 API created  with PHP (using Slim framework) and consumed with Angular JS
 ## Demo
 
